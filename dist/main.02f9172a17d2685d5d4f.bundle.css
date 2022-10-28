@@ -11,16 +11,24 @@ body {
     font-family: 'Roboto', sans-serif;
     height: 100vh;
     width: 100vw;
+		background-color: #fff;
+		background-image: url(b2d41a534d93a142aec0.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+		filter: brightness(0.9)
 }
 
 .menu {
     position: fixed;
     z-index: 1000;
-    width: 150px;
+    width: 450px;
     background: #1b1a1a;
-    border-radius: 5px;
+    border-radius: 15px;
     display: none;
     list-style: none;
+
 }
 
 .menu.open {
@@ -28,8 +36,8 @@ body {
 }
 
 .menu .menu-item {
-    padding: 8px 10px;
-    font-size: 1rem;
+    padding: 20px 40px;
+    font-size: 1.5rem;
     color: #eee;
     cursor: pointer;
     transition: background-color .2s ease-in;
@@ -49,6 +57,7 @@ body {
 	align-items: center;
 	width: 100vw;
 	height: 100vh;
+	z-index: 999;
 }
 h1 {
 	font-size: 40px;
@@ -66,9 +75,9 @@ h2 {
 	text-shadow: #fc0 1px 0 20px, #ff9d00 1px 0 20px;
 }
 section {
-	min-height: 100vh;
 	position: fixed;
 	top: 0;
+	bottom: 0;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -76,6 +85,8 @@ section {
 	align-items: center;
 	background-color: #1e1f34;
 	transition: transform ease 1s;
+	z-index: 999;
+	overflow: hidden;
 }
 #t-welcome {
 	z-index: 1000;
@@ -259,6 +270,46 @@ background-position: bottom center;
   }
 }
 
+@keyframes t-pumpkins-message {
+  0% {
+    transform: translate3d(0, 0, 0);
+		opacity: 0;
+		width: 250px;
+  }
+  50% {
+    transform: translate3d(0, -30%, 0);
+		opacity: 100%;
+		width: 350px;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+		opacity: 0%;
+		width: 200px;
+  }
+}
+.t-words {
+	color: #fff;
+	margin: 20px;
+	background-color: orange;
+	font-size: 30px;
+	text-transform: uppercase;
+	animation: t-pumpkins-message infinite ease 4s;
+	width: 300px;
+	position: absolute;
+	text-align: center;
+	padding: 30px;
+	border-radius: 60px 90px 60px 80px;
+	z-index: 10;
+	font-family: 'Press Start 2P', cursive;
+
+}
+.t-words-container {
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 100vw;
+	height: 260px;
+}
 #t-game-over {
 	top: 100vh;
 	transition: top ease 1s;
