@@ -10,6 +10,8 @@ body {
 	color: #fff;
 	width: 100vw;
 	height: 100vh;
+	background-color: #fff;
+	background-image: url(./)
 }
 
 #t-gameContainer {
@@ -183,7 +185,6 @@ background-repeat: no-repeat;
 background-position: bottom center;
 }
 .t-stone4 {
-	background-image: url(./stone4.webp);
 	position: absolute;
 	width: 124px;
 	height: 40px;

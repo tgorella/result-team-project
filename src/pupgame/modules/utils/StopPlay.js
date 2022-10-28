@@ -13,8 +13,7 @@ export default function stopPlay(score) {
 	quitButton.className = 't-play-btn';
 	slide3.append(header, totalScore, quitButton);
 	quitButton.addEventListener('click', (event) => {
-		const gameContainer = document.querySelector('#t-gameContainer');
-		gameContainer.remove();
+		window.location.reload();
 	})
 
 	
