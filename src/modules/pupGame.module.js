@@ -18,16 +18,18 @@ export default class PupGame extends Module {
 	}
 
 	trigger() {
+		let isOpen = false;
 		document.addEventListener('click', (event) => {	
-			if (event.target.dataset.type === this.type) {
+			if (event.target.dataset.type === this.type && !isOpen) {
+				isOpen = true;
     renderPickUpPumpkins();
-		const startPlayBtn = document.querySelector('#start-play-btn');
+		const startPlayBtn = document.querySelector('#t-start-play-btn');
 		startPlayBtn.addEventListener('click', startPlay);
-		const gameScreenContainer = document.querySelector('#game');
+		const gameScreenContainer = document.querySelector('#t-game');
 		gameScreenContainer.append(Playground.gameScreenHTML());
 		let isFinded = false;
 		let score = 0;
-		renderScore('#score', score);
+		renderScore('#t-score', score);
 			
 		for (let i=1; i < 40; i++) {
 			const stone = new Stones;
@@ -72,7 +74,7 @@ function findPumpkin() {
 		isFinded = true;
 		ghost.increaseSpeed();
 		stopSearching();
-		renderScore('#score', score);
+		renderScore('#t-score', score);
 	}
 	
 	if (ghost.currentPositionX() < -60 || ghost.currentPositionY() < 0 || ghost.currentPositionX() > 510 || ghost.currentPositionY() > 1160) {

@@ -7,10 +7,10 @@ export default class Pumpkin {
 	}
 
 	render(x=this.positionX, y=this.positionY) {
-		this.img.className = 'pumpkin';
+		this.img.className = 't-pumpkin';
 		this.img.style.top = `${this.positionX}px`;
 		this.img.style.left = `${this.positionY}px`;
-		const playground = document.querySelector('.playground')
+		const playground = document.querySelector('.t-playground')
 		playground.append(this.img);
 	}
 

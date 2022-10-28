@@ -42,7 +42,7 @@ body {
     background: #343434;
 }
 
-#gameContainer {
+#t-gameContainer {
 	background-color: #1e1f34;
 	color: #fff;
 	display: flex;
@@ -79,22 +79,22 @@ section {
 	background-color: #1e1f34;
 	transition: transform ease 1s;
 }
-#welcome {
+#t-welcome {
 	z-index: 1000;
 }
-.play {
+.t-play {
 	transform: translateY(-100%);
 }
 
-.instructions {
+.t-instructions {
 	font-size: 22px;
 	max-width: 600px;
 	margin-bottom: 20px;
 }
-.instructions div {
+.t-instructions div {
 	margin-bottom: 20px;
 }
-.play-btn {
+.t-play-btn {
 	font-size: 30px;
 	text-transform: uppercase;
 	padding: 20px 40px;
@@ -104,39 +104,39 @@ section {
 	border-radius: 60px;
 	cursor: pointer;
 }
-.play-btn:hover {
+.t-play-btn:hover {
 	transform: translateY(2px);
 }
-#score {
+#t-score {
 	font-size: 20px;
 	margin-bottom: 20px;
 	text-transform: uppercase;
 	font-family: 'Press Start 2P', cursive;
 	text-align: center;
 }
-.fence {
+.t-fence {
 	background-image: url(./pupgame/fence.webp);
 	width: 1200px;
 	height: 60px;
 }
-.playground-container {
+.t-playground-container {
 	width: 1224px;
 	height: 688px;
 	display: flex;
 
 }
-.fence-side {
+.t-fence-side {
 	width: 12px;
 	height: 100%;
 background-image: url(./pupgame/fence-side.webp);
 
 }
-.fence-bottom {
+.t-fence-bottom {
 background-image: url(./pupgame/fence-bottom.webp);
 height: 28px;
 }
 
-.playground {
+.t-playground {
 min-width: 1200px;
 height: 600px;
 background-color: #3d4357;
@@ -144,7 +144,7 @@ position: relative;
 background-image: url(./pupgame/ground.webp);
 }
 
-.ghost {
+.t-ghost {
 	position: absolute;
 	/* background-color: blue; */
 	width: 70px;
@@ -154,14 +154,14 @@ background-image: url(./pupgame/ground.webp);
 	justify-content: flex-end;
 	align-items: center;
 }
-.ghost-image {
+.t-ghost-image {
 	width: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
 }
 
-.pumpkin {
+.t-pumpkin {
 	position: absolute;
 	width: 60px;
 	height: 60px;
@@ -172,7 +172,7 @@ background-position: bottom center;
 z-index: 50;
 
 }
-.stone {
+.t-stone {
 	position: absolute;
 	width: 124px;
 	height: 40px;
@@ -180,7 +180,7 @@ background-repeat: no-repeat;
 background-position: bottom center;
 }
 
-.stone0 {
+.t-stone0 {
 	background-image: url(./pupgame/stone0.webp);
 	position: absolute;
 	width: 124px;
@@ -188,7 +188,7 @@ background-position: bottom center;
 background-repeat: no-repeat;
 background-position: bottom center;
 }
-.stone1 {
+.t-stone1 {
 	background-image: url(./pupgame/stone1.webp);
 	position: absolute;
 	width: 124px;
@@ -196,7 +196,7 @@ background-position: bottom center;
 background-repeat: no-repeat;
 background-position: bottom center;
 }
-.stone2 {
+.t-stone2 {
 	background-image: url(./pupgame/stone2.webp);
 	position: absolute;
 	width: 124px;
@@ -204,7 +204,7 @@ background-position: bottom center;
 background-repeat: no-repeat;
 background-position: bottom center;
 }
-.stone3 {
+.t-stone3 {
 	background-image: url(./pupgame/stone3.webp);
 	position: absolute;
 	width: 124px;
@@ -212,7 +212,7 @@ background-position: bottom center;
 background-repeat: no-repeat;
 background-position: bottom center;
 }
-.stone4 {
+.t-stone4 {
 	background-image: url(./pupgame/stone4.webp);
 	position: absolute;
 	width: 124px;
@@ -220,14 +220,14 @@ background-position: bottom center;
 background-repeat: no-repeat;
 background-position: bottom center;
 }
-.dead {
+.t-dead {
 }
 
-.ghost {
+.t-ghost {
   animation: soar infinite ease 3s;
 }
 
-.ghost-shadow {
+.t-ghost-shadow {
   background-color: #282c3a;
   height: 15px;
   width: 60px;
@@ -261,11 +261,11 @@ background-position: bottom center;
   }
 }
 
-#game-over {
+#t-game-over {
 	top: 100vh;
 	transition: top ease 1s;
 }
-.red {
+.t-red {
 	text-shadow: #e91e63 1px 0 20px, #ff4a4a 1px 0 20px;
   font-size: 60px;
 }

@@ -10,9 +10,9 @@ export default class Hero {
 		this.img = document.createElement('div');
 		this.ghost = document.createElement('img');
 		this.ghost.src = GHOST_IMG;
-		this.ghost.className='ghost-image';
+		this.ghost.className='t-ghost-image';
 		const shadow = document.createElement('div');
-		shadow.className = 'ghost-shadow';
+		shadow.className = 't-ghost-shadow';
 		this.img.append(this.ghost, shadow);
 		this.isDead = false;
 		this.positionX = 30;
@@ -22,10 +22,10 @@ export default class Hero {
 
 	
 	render(x=this.positionX, y=this.positionY) {
-		this.img.className = 'ghost';
+		this.img.className = 't-ghost';
 		this.img.style.top = `${this.positionX}px`;
 		this.img.style.left = `${this.positionY}px`;
-		const playground = document.querySelector('.playground')
+		const playground = document.querySelector('.t-playground')
 		playground.append(this.img);
 }
 
@@ -75,7 +75,7 @@ export default class Hero {
 	dead() {
 		clearInterval(this.currentDirection);
 		this.ghost.src = GHOST_DEAD;
-		this.img.classList.add('dead');
+		this.img.classList.add('t-dead');
 	}
 
 }
