@@ -1,4 +1,4 @@
-import './styles.css';
+import sheet from './styles.css' assert { type: 'css' };
 import ContextMenu from './menu.js';
 import PupGame from './modules/pupGame.module.js';
 
