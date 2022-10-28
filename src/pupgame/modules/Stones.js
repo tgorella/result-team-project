@@ -8,7 +8,7 @@ export default class Stones {
 	}
 
 	render(x=this.positionX, y=this.positionY) {
-		const num = Math.floor(Math.random() * 5);
+		const num = Math.floor(Math.random() * 4);
 		this.stone.className = `t-stone${num}`;
 		this.stone.style.top = `${this.positionX}px`;
 		this.stone.style.left = `${this.positionY}px`;
