@@ -1,5 +1,4 @@
 import './styles.css';
-import './pupgame/styles.css'
 import ContextMenu from './menu.js';
 import PupGame from './modules/pupGame.module.js';
 

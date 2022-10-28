@@ -1,4 +1,4 @@
-import {Module} from '../core/module';
+import {Module} from '../core/module.js';
 import renderPickUpPumpkins from '../pupgame/modules/renderPickUpPumpkins.js';
 import renderScore from '../pupgame/modules/utils/RenderScore.js';
 import startPlay from '../pupgame/modules/utils/StartPlay.js';
