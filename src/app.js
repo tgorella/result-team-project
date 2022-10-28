@@ -17,6 +17,7 @@ setTimeout( () => {
 const contextMenu = new ContextMenu;
 const pupGame = new PupGame;
 const home = new Home;
+home.trigger();
 contextMenu.add(home);
 contextMenu.add(pupGame);
 pupGame.trigger();

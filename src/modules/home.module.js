@@ -8,6 +8,7 @@ export default class Home extends Module {
 
 	trigger() {
 		document.addEventListener('click', (event) => {	
+			console.log(event.target.dataset.type)
 			if (event.target.dataset.type === this.type) {
 				console.log('домой!')
 				window.location.reload();
