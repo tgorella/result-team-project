@@ -6,7 +6,7 @@ import Word from './modules/PumpkinWords.js'
 import Answers from './modules/answer.module.js'
 import BackgroundModule from './modules/background.module'
 
-setInterval(generateWords, 2000)
+export const pumpkinSpeaks = setInterval(generateWords, 2000);
 
 function generateWords() {
   const word = new Word()
