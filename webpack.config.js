@@ -22,7 +22,6 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, 'dist'),
       filename: filename('js'),
       clean: true,
-      publicPath: 'public',
     },
     resolve: {
       extensions: ['.js'],
