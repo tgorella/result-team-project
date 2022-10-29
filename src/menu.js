@@ -12,8 +12,8 @@ constructor(selector) {
 }
 
 open(event) {
-			this.menu.style.top = `${event.clientY}px`;
-			this.menu.style.left = `${event.clientX}px`;
+		this.menu.style.top = `${event.clientY}px`;
+		this.menu.style.left = `${event.clientX}px`;
 		this.menu.style.display = 'block';
 }
 

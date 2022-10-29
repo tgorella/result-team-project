@@ -305,6 +305,23 @@ background-position: bottom center;
 	font-family: 'Press Start 2P', cursive;
 
 }
+.t-words-black {
+	color: orange;
+	margin: 20px;
+	background-color: black;
+	font-size: 40px;
+	text-transform: uppercase;
+	/* width: 300px; */
+	position: absolute;
+	text-align: center;
+	padding: 50px;
+	border-radius: 20px 20px 40px 40px;
+	z-index: 10;
+	font-family: 'Press Start 2P', cursive;
+	animation: t-pumpkins-message infinite ease 4s;
+
+}
+
 .t-words-container {
 	position: absolute;
 	top: 40px;
