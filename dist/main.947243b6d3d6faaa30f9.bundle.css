@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Press+Start+2P&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap);
 * {
     margin: 0;
     padding: 0;
@@ -459,11 +458,6 @@ z-index: 900;
 	font-family: 'Press Start 2P', cursive;
 	line-height: 1.2;
 z-index: 999;
-}
-
-body {
-  margin: 0;
-  font-family: 'Press Start 2P';
 }
 
 canvas {
