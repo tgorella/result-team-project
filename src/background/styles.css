@@ -20,7 +20,7 @@ canvas {
   background-size: 20%;
   background-position: 50% 50%;
 
-  z-index: -1;
+  z-index: 500;
 }
 
 .play-list {
@@ -33,7 +33,7 @@ canvas {
   text-transform: lowercase;
   text-align: center;
   text-shadow: 0 0 3px rgba(255, 255, 255, 8);
-  z-index: 900;
+  z-index: 501;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -61,7 +61,7 @@ canvas {
   text-transform: lowercase;
   text-align: center;
   text-shadow: 0 0 3px rgba(255, 255, 255, 8);
-  z-index: 900;
+  z-index: 501;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -90,7 +90,7 @@ canvas {
   text-transform: lowercase;
   text-align: center;
   text-shadow: 0 0 3px rgba(255, 255, 255, 8);
-  z-index: 900;
+  z-index: 501;
   margin: 0;
   position: absolute;
   top: 50%;
