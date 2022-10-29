@@ -40,12 +40,4 @@ backgroundModule.trigger()
 document.addEventListener('contextmenu', (event) => {
   event.preventDefault()
   contextMenu.open(event)
-
-  // for (let i = 0; i < 5; i++) {
-  //   const word = new Word()
-  //   word.renderBoo()
-  //   setTimeout(() => {
-  //     word.remove()
-  //   }, 4000)
-  // }
 })
