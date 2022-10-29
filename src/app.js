@@ -6,7 +6,7 @@ import Word from './modules/PumpkinWords.js'
 import Answers from './modules/answer.module.js'
 import BackgroundModule from './modules/background.module'
 
-setInterval(generateWords, 2000)
+export const pumpkinSpeaks = setInterval(generateWords, 2000);
 
 function generateWords() {
   const word = new Word()
@@ -41,11 +41,11 @@ document.addEventListener('contextmenu', (event) => {
   event.preventDefault()
   contextMenu.open(event)
 
-  for (let i = 0; i < 5; i++) {
-    const word = new Word()
-    word.renderBoo()
-    setTimeout(() => {
-      word.remove()
-    }, 4000)
-  }
+  // for (let i = 0; i < 5; i++) {
+  //   const word = new Word()
+  //   word.renderBoo()
+  //   setTimeout(() => {
+  //     word.remove()
+  //   }, 4000)
+  // }
 })
