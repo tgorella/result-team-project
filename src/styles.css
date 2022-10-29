@@ -76,6 +76,7 @@ h2 {
 	font-family: 'Press Start 2P', cursive;
 	text-shadow: #fc0 1px 0 20px, #ff9d00 1px 0 20px;
 }
+
 section {
 	position: fixed;
 	top: 0;
@@ -90,6 +91,7 @@ section {
 	z-index: 999;
 	overflow: hidden;
 }
+
 #t-welcome {
 	z-index: 1000;
 }
@@ -407,7 +409,7 @@ z-index: 901;
 	justify-content: center;
 	align-items: center;
 	z-index: 904;
-	}
+}
 	
 	@keyframes glowAnim {
 		0% {
@@ -441,5 +443,159 @@ z-index: 900;
 	text-transform: uppercase;
 	font-family: 'Press Start 2P', cursive;
 	line-height: 1.2;
-z-index: 999;
+	z-index: 999;
 }
+
+
+/* Стили к игре про зелья/clicks-game */
+.body {
+	overflow: hidden;
+}
+
+.d-screen.d-up {
+	z-index: 1005;;
+
+	/* margin-top: -100vh; */
+}
+
+.d-clicks-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 100vw;
+	height: 100vh;
+	z-index: 1000;
+
+	font-family: 'Press Start 2P', cursive;
+	line-height: 25px;
+
+	color: #231829;	
+	
+	overflow: hidden;
+}
+
+.d-screen {
+	transition: margin 0.5s ease-out;
+	height: 100vh;
+	width: 100vw;
+
+	background-color: #745d91;
+}
+
+/* Стили к игре про зелья/clicks-game – ПЕРВЫЙ ЭКРАН*/
+.d-start-screen {
+	z-index: 1003;
+}
+
+.d-start-content {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-around;
+
+	column-gap: 100px;
+}
+
+.d-start__plot {
+	max-width: 400px;
+}
+
+.d-start__choice {
+	max-width: 300px;
+}
+
+.td-time-list {
+	list-style: none;
+}
+  
+.d-btn {
+	margin-top: 10px;
+	
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 15px;
+}
+  
+.d-btn:hover {
+	color: #fbc058;
+}
+  
+.d-time-li {
+	margin-top: 10px;
+
+	display: flex;
+	column-gap: 10px;
+}
+
+.d-time-prompt {
+	font-size: 10px;
+	
+	color: #fbc058;
+	opacity: 0;
+  }
+
+.span-score {
+	color: #DBAD5E;
+}
+
+/* Стили к игре про зелья/clicks-game – ВТОРОЙ ЭКРАН*/
+.d-game-screen {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	/* z-index: 1002; */
+}
+
+.d-game-timer {
+	font-size: 20px;
+}
+
+.d-conditions {
+	display: flex;
+	align-items: center;
+	column-gap: 400px;
+}
+
+.d-board {
+    margin-top: 30px;
+    width: 400px;
+    flex-wrap: wrap;
+}
+
+.d-magic-pot {
+	margin-top: 50px;
+	
+	display: flex;
+	align-items: center;
+	
+}
+  
+.d-magic-pot__img {
+	height: 200px;
+}
+
+.d-potion-example {
+	height: 50px;
+}
+
+.d-potion {
+	cursor: pointer;
+	
+	margin: 20px;
+	
+	height: 50px;
+	border-radius: 10px;
+}
+
+/* Стили к игре про зелья/clicks-game – ТРЕТИЙ ЭКРАН*/
+/* <h3>Cчет: <span class="d-result-score"></span></h3>
+<p class="d-result-text"></p> 
+<img class="d-magic-item__img">
+
+<button class="d-btn d-try-again">Начать сначала</button> */
