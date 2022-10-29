@@ -16,22 +16,19 @@ module.exports = (env, argv) => {
     target: 'web',
     context: path.resolve(__dirname, 'src'),
     entry: {
-      main: [
-        'core-js/stable',
-        'regenerator-runtime/runtime',
-        './app.js'
-      ],
+      main: ['core-js/stable', 'regenerator-runtime/runtime', './app.js'],
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: filename('js'),
-      clean: true
+      clean: true,
+      publicPath: 'public',
     },
     resolve: {
       extensions: ['.js'],
       alias: {
-        '@': path.resolve(__dirname, 'src')
-      }
+        '@': path.resolve(__dirname, 'src'),
+      },
     },
     devServer: {
       port: '3000',
@@ -41,33 +38,38 @@ module.exports = (env, argv) => {
     devtool: isDev ? 'source-map' : false,
     plugins: [
       new HtmlWebpackPlugin({
-        template: './index.html'
+        template: './index.html',
       }),
       new MiniCssExtractPlugin({
-        filename: filename('css')
+        filename: filename('css'),
       }),
     ],
     module: {
       rules: [
         {
           test: /\.css$/i,
-          use: [MiniCssExtractPlugin.loader, "css-loader"],
+          use: [MiniCssExtractPlugin.loader, 'css-loader'],
         },
         {
           test: /\.m?js$/,
           exclude: /node_modules/,
           use: {
-            loader: "babel-loader",
+            loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env']
-            }
-          }
+              presets: ['@babel/preset-env'],
+            },
+          },
+        },
+        {
+          test: /.(png|svg|jpg|jpeg|gif|webp)$/i,
+          type: 'asset/resource',
         },
 				{
 					test: /.(png|svg|jpg|jpeg|gif|webp|mp3)$/i,
 					type: 'asset/resource',
-				}
+				},
+
       ],
-    }
+    },
   }
 }
