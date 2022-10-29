@@ -10,6 +10,7 @@ import {
 export default class BackgroundModule extends Module {
   constructor() {
     super('background', `Сменить фон`)
+    this.random = 0
   }
 
   init() {
@@ -17,13 +18,6 @@ export default class BackgroundModule extends Module {
       const particlesJS = document.createElement('div')
       particlesJS.id = 'particles-js'
       document.body.append(particlesJS)
-    }
-  }
-
-  destroy() {
-    const particlesJS = document.querySelector('#particles-js')
-    if (particlesJS) {
-      document.body.remove(particlesJS)
     }
   }
 
@@ -37,19 +31,17 @@ export default class BackgroundModule extends Module {
         event.target.dataset.type !== this.type &&
         event.target.dataset.type
       ) {
-        console.log('type', event.target.dataset.type)
-        // this.destroy()
+        const particlesJS = document.querySelector('#particles-js')
+        if (particlesJS) {
+          document.body.remove(particlesJS)
+        }
       }
     })
   }
 
   changeBG() {
     const backgrounds = [background1, background2, background3]
-    const tracks = [
-      './background/audio/crywolf.mp3',
-      './background/audio/halloween-parade.mp3',
-      './background/audio/halloween.mp3',
-    ]
+    const tracks = ['/crywolf.mp3', '/halloween-parade.mp3', '/halloween.mp3']
     const btnColors = ['white', 'orange', 'grey']
 
     const playlist = document.createElement('div')
@@ -64,11 +56,14 @@ export default class BackgroundModule extends Module {
     playlist.append(audio, neonBtn)
     document.body.append(playlist)
 
-    randomBG()
-    function randomBG() {
+    const randomBG = () => {
       const particlesJS = document.querySelector('#particles-js')
 
       let random = Math.floor(Math.random() * backgrounds.length)
+      if (random === this.random) {
+        random = (random + 1) % 3
+      }
+      this.random = random
       switch (random) {
         case 0:
           particlesJS.style.backgroundColor = '#0d0223'
@@ -80,9 +75,10 @@ export default class BackgroundModule extends Module {
           particlesJS.style.backgroundColor = '#000'
       }
       backgrounds[random]()
-      //   audio.src = tracks[random]
+      audio.src = tracks[random]
       neonBtn.className = btnColors[random]
     }
+    randomBG()
 
     neonBtn.addEventListener('click', () => {
       randomBG(backgrounds)
