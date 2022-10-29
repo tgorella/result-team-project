@@ -103,7 +103,7 @@ section {
 .t-instructions div {
 	margin-bottom: 20px;
 }
-.t-play-btn {
+.t-play-btn, .t-answer-button {
 	font-size: 30px;
 	text-transform: uppercase;
 	padding: 20px 40px;
@@ -323,5 +323,122 @@ h3 {
 	text-transform: uppercase;
 	font-family: 'Press Start 2P', cursive;
 margin-bottom: 20px;
+}
+
+#t-crystallball {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #16101c;
+	text-align: center;
+	color: #fff;
+	z-index: 900
+}
+
+.t-crystall-ball-title {
+	font-size: 20px;
+	text-transform: uppercase;
+	font-family: 'Press Start 2P', cursive;
+margin-bottom: 20px;
+margin-top: 80px;
+}
+.t-answer-button {
+background-color: #fff;
+}
+
+
+
+.t-crystall-ball {
+	position: absolute;
+top: calc((100% - 60vh)/2);
+left: calc((100% - 50vh)/2);
+background-image: url(994c7e5524ee21ce9a52.png);
+width: 512px;
+height: 512px;
+animation: crystalBollAnim 2s ease-in-out 0s 1 normal forwards;
+z-index: 901;
+}
+
+@keyframes crystalBollAnim {
+	0% {
+		transform: translateX(600%);
+		transform-origin: 50% 50%;
+	}
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
+
+.t-crystal-glow {
+	position: absolute;
+	top: calc((100% - 70vh)/2);
+	left: calc((100% - 45vh)/2);
+	height: 50vh;
+	width: 50vh;
+	background: rgb(121,193,230);
+	background: radial-gradient(circle, #fff 0%, rgba(121,193,230,1) 20%, transparent 70%);
+	animation: glowAnim 2s ease-in-out 0s infinite normal forwards;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 904;
+	}
+	
+	@keyframes glowAnim {
+		0% {
+			transform: scale(1);
+		}
+	
+		50% {
+			transform: scale(1.1);
+		}
+	
+		100% {
+			transform: scale(1);
+		}
+	}
+
+.t-crystall-ball-shadow {
+width: 412px;
+height: 100px;
+border-radius: 50%;
+position: absolute;
+top: 65%;
+left: 50%;
+transform: translateX(-40%);
+background-color: rgba(0,0,0, 0.5);
+filter: blur(5px);
+z-index: 900;
+}
+
+.t-crystall-ball-message {
+	font-size: 50px;
+	text-transform: uppercase;
+	font-family: 'Press Start 2P', cursive;
+	line-height: 1.2;
+z-index: 999;
 }
 

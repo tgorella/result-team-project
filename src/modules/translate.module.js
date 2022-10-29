@@ -1,8 +1,8 @@
 import {Module} from '../core/module'
 
-export default class Home extends Module {
+export class TranslateModule extends Module {
 	constructor() {
-		super('home', `Вернуться на главную`) 
+		super('translate', `Такст в меню`) 
 		
 	}
 
@@ -10,7 +10,7 @@ export default class Home extends Module {
 		document.addEventListener('click', (event) => {	
 			console.log(event.target.dataset.type)
 			if (event.target.dataset.type === this.type) {
-				window.location.reload();
+				// ваш код тут
 			}
 		})
 	}
