@@ -424,13 +424,13 @@ z-index: 901;
 	}
 
 .t-crystall-ball-shadow {
-width: 412px;
+width: 400px;
 height: 100px;
 border-radius: 50%;
 position: absolute;
-top: 65%;
+top: 63%;
 left: 50%;
-transform: translateX(-40%);
+transform: translateX(-45%);
 background-color: rgba(0,0,0, 0.5);
 filter: blur(5px);
 z-index: 900;
