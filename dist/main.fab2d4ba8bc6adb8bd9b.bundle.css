@@ -461,10 +461,6 @@ z-index: 900;
 z-index: 999;
 }
 
-body {
-  margin: 0;
-  font-family: 'Press Start 2P';
-}
 
 canvas {
   display: block;
