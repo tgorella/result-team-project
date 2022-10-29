@@ -23,6 +23,16 @@ export default class Word {
 	this.wordContainer.append( this.message);
 	}
 
+	renderBoo(x=this.positionX, y=this.positionY) {
+	
+		const num = Math.floor(Math.random() * 4);
+		this.message.className = 't-words-black';
+		this.message.innerText = 'Booooo!';
+		this.message.style.top = `${this.positionX}px`;
+		this.message.style.left = `${this.positionY}px`;
+		this.wordContainer.append( this.message);
+		}
+
 	remove() {
 		document.getElementById(this.id).remove();
 	}
