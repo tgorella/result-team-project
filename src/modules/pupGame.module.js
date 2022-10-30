@@ -9,7 +9,7 @@ import Stones from '../pupgame/modules/Stones.js';
 import gameOver from '../pupgame/modules/utils/GameOver.js';
 import stopPlay from '../pupgame/modules/utils/StopPlay.js';
 import { pumpkinSpeaks } from '../app.js';
-
+import { clearScreen  } from "../utils";
 
 
 export default class PupGame extends Module {
@@ -22,7 +22,12 @@ export default class PupGame extends Module {
 		let isOpen = false;
 		document.addEventListener('click', (event) => {	
 			if (event.target.dataset.type === this.type && !isOpen) {
+				clearScreen();
 				clearInterval(pumpkinSpeaks);
+				const menuItems = document.querySelectorAll('.menu-item');
+				for (let i = 1; i < menuItems.length; i++) {
+					menuItems[i].remove();
+				}
 				isOpen = true;
     renderPickUpPumpkins();
 		const startPlayBtn = document.querySelector('#t-start-play-btn');

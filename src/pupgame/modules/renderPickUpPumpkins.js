@@ -1,10 +1,11 @@
 import WELCOME_IMG from '../welcome-img.webp';
+import AUDIO from '../HalloweenTheme.mp3';
 
 export default function renderPickUpPumpkins() {
 const gameContainer = document.createElement('div');
 gameContainer.id = 't-gameContainer';
 const audio = document.createElement('audio');
-// audio.src = './src/halloween_2018_02 - Halloween Theme.mp3';
+audio.src = AUDIO;
 audio.autoplay = 'true';
 const welcomeSection = document.createElement('section');
 welcomeSection.id = 't-welcome';

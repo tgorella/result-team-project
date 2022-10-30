@@ -13,6 +13,7 @@ export default class BackgroundModule extends Module {
   constructor() {
     super('background', 'Tсс...')
     this.random = 0
+		
   }
 
   init() {
@@ -26,6 +27,7 @@ export default class BackgroundModule extends Module {
   trigger() {
     document.addEventListener('click', (event) => {
       if (event.target.dataset.type === this.type) {
+				
         this.init()
         this.changeBG()
       } else if (
@@ -34,7 +36,9 @@ export default class BackgroundModule extends Module {
       ) {
         const particlesJS = document.querySelector('#particles-js')
         if (particlesJS) {
+
           particlesJS.remove()
+
         }
       }
     })

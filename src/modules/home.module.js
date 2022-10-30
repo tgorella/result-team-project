@@ -1,4 +1,5 @@
 import {Module} from '../core/module'
+import { clearScreen } from '../utils.js';
 
 export default class Home extends Module {
 	constructor() {
@@ -8,9 +9,8 @@ export default class Home extends Module {
 
 	trigger() {
 		document.addEventListener('click', (event) => {	
-			console.log(event.target.dataset.type)
 			if (event.target.dataset.type === this.type) {
-				window.location.reload();
+				clearScreen()
 			}
 		})
 	}
