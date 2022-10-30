@@ -21,7 +21,7 @@ $text-color: #e7e7e7;
   background: url(../../../assets/translator/translator-bg.jpeg) no-repeat center center;
   background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .ju-main {
@@ -175,7 +175,7 @@ $text-color: #e7e7e7;
 }
 
 .ju-canvas {
-  z-index: 1500;
+  z-index: 1000;
   position: absolute;
   top: 0%;
 }

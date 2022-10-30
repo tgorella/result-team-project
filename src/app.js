@@ -6,6 +6,7 @@ import BackgroundModule from "./modules/background/background.module";
 import AnswersModule from "./modules/answers/answer.module";
 import PupgameModule from "./modules/pupgame/pupGame.module";
 import TranslateModule from "./modules/translator/translator.module";
+import ClicksModule from "./modules/clicks/clicks.module";
 
 export const pumpkinSpeaks = setInterval(generateWords, 2000);
 
@@ -23,18 +24,21 @@ const backgroundModule = new BackgroundModule();
 const answersModule = new AnswersModule();
 const pupgameModule = new PupgameModule();
 const translatorModule = new TranslateModule();
+const clicksModule = new ClicksModule();
 
 contextMenu.add(homeModule);
 contextMenu.add(pupgameModule);
 contextMenu.add(answersModule);
 contextMenu.add(backgroundModule);
 contextMenu.add(translatorModule);
+contextMenu.add(clicksModule);
 
 homeModule.trigger();
 backgroundModule.trigger();
 answersModule.trigger();
 pupgameModule.trigger();
 translatorModule.trigger();
+clicksModule.trigger();
 
 document.addEventListener("contextmenu", (event) => {
   event.preventDefault();

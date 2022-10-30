@@ -23,4 +23,8 @@ export function clearScreen() {
     document.querySelector("#translator-ju").remove();
     window.location.reload();
   }
+  if (document.querySelector("#clicks-d")) {
+    document.querySelector("#clicks-d").remove();
+    window.location.reload();
+  }
 }

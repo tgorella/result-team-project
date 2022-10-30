@@ -500,3 +500,185 @@ h3 {
 	line-height: 1.2;
 	z-index: 999;
 }
+
+.body {
+	overflow: hidden;
+}
+
+.d-screen.d-up {
+	z-index: 999;;
+
+	/* margin-top: -100vh; */
+}
+
+.d-clicks-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 100vw;
+	height: 100vh;
+	z-index: 990;
+
+	font-family: 'Press Start 2P', cursive;
+	line-height: 25px;
+
+	color: #231829;	
+	
+	overflow: hidden;
+}
+
+.d-screen {
+	transition: margin 0.5s ease-out;
+	height: 100vh;
+	width: 100vw;
+
+	background-color: #745d91;
+}
+
+/* Стили к игре про зелья/clicks-game – ПЕРВЫЙ ЭКРАН*/
+.d-start-screen {
+	z-index: 997;
+}
+
+.d-start-content {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-around;
+
+	column-gap: 100px;
+}
+
+.d-start__plot {
+	max-width: 400px;
+}
+
+.d-start__choice {
+	max-width: 300px;
+}
+
+.td-time-list {
+	list-style: none;
+}
+  
+.d-btn {
+	margin-top: 10px;
+	
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 15px;
+}
+  
+.d-btn:hover {
+	color: #fbc058;
+}
+  
+.d-time-li {
+	margin-top: 10px;
+
+	display: flex;
+	column-gap: 10px;
+}
+
+.d-time-prompt {
+	font-size: 10px;
+	
+	color: #fbc058;
+	opacity: 0;
+  }
+
+.span-score {
+	font-size: 20px;
+
+	color: #DBAD5E;
+}
+
+.d-time-btn:hover+.d-time-prompt {
+	opacity: 1;
+}
+
+/* Стили к игре про зелья/clicks-game – ВТОРОЙ ЭКРАН*/
+.d-game-screen {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	z-index: 996;
+}
+
+.d-game-timer {
+	font-size: 20px;
+}
+
+.d-cond{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.d-conditions {
+	display: flex;
+	align-items: center;
+	column-gap: 400px;
+}
+
+.d-board {
+    margin-top: 30px;
+    width: 400px;
+    flex-wrap: wrap;
+}
+
+.d-magic-pot {
+	margin-top: 50px;
+	
+	display: flex;
+	align-items: center;
+	
+}
+  
+.d-magic-pot__img {
+	height: 200px;
+}
+
+.d-potion-example {
+	height: 50px;
+}
+
+.d-potion {
+	cursor: pointer;
+	
+	margin: 20px;
+	
+	height: 50px;
+	border-radius: 10px;
+}
+
+/* Стили к игре про зелья/clicks-game – ТРЕТИЙ ЭКРАН*/
+.d-end-screen {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.d-result-text {
+	margin-top: 20px;
+	
+	max-width: 400px;
+	text-align: center;
+}
+
+.d-result-score {
+	color: #fbc058;
+}
+
+.d-magic-item__img {
+	margin-top: 50px;
+	height: 200px;
+}
