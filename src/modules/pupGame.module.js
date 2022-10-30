@@ -23,6 +23,10 @@ export default class PupGame extends Module {
 		document.addEventListener('click', (event) => {	
 			if (event.target.dataset.type === this.type && !isOpen) {
 				clearInterval(pumpkinSpeaks);
+				const menuItems = document.querySelectorAll('.menu-item');
+				for (let i = 1; i < menuItems.length; i++) {
+					menuItems[i].remove();
+				}
 				isOpen = true;
     renderPickUpPumpkins();
 		const startPlayBtn = document.querySelector('#t-start-play-btn');
