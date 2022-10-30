@@ -506,7 +506,7 @@ h3 {
 }
 
 .d-screen.d-up {
-	z-index: 1005;;
+	z-index: 999;;
 
 	/* margin-top: -100vh; */
 }
@@ -519,7 +519,7 @@ h3 {
 
 	width: 100vw;
 	height: 100vh;
-	z-index: 1000;
+	z-index: 990;
 
 	font-family: 'Press Start 2P', cursive;
 	line-height: 25px;
@@ -539,7 +539,7 @@ h3 {
 
 /* Стили к игре про зелья/clicks-game – ПЕРВЫЙ ЭКРАН*/
 .d-start-screen {
-	z-index: 1003;
+	z-index: 997;
 }
 
 .d-start-content {
@@ -608,7 +608,7 @@ h3 {
 	align-items: center;
 	justify-content: center;
 
-	z-index: 1002;
+	z-index: 996;
 }
 
 .d-game-timer {
@@ -665,6 +665,7 @@ h3 {
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
+	z-index: 995;
 }
 
 .d-result-text {
@@ -812,7 +813,7 @@ canvas {
   background: url(5191b2a202f2c1f5fd5e.jpeg) no-repeat center center;
   background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .ju-main {
@@ -974,7 +975,7 @@ canvas {
 }
 
 .ju-canvas {
-  z-index: 1500;
+  z-index: 1000;
   position: absolute;
   top: 0%;
 }
