@@ -7,6 +7,7 @@ gameContainer.id = 't-gameContainer';
 const audio = document.createElement('audio');
 audio.src = AUDIO;
 audio.autoplay = 'true';
+audio.loop = 'true';
 const welcomeSection = document.createElement('section');
 welcomeSection.id = 't-welcome';
 const welcomeImg = document.createElement('img');

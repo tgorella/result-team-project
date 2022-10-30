@@ -1,5 +1,6 @@
 import {Module} from '../core/module'
-import { pumpkinSpeaks } from '../app.js';
+import { clearScreen } from '../../src/utils'
+// import { pumpkinSpeaks } from '../app.js';
 
 export default class Answers extends Module {
 	constructor() {
@@ -16,10 +17,9 @@ export default class Answers extends Module {
 	trigger() {
 		document.addEventListener('click', (event) => {	
 			if (event.target.dataset.type === this.type) {
-				clearInterval(pumpkinSpeaks);
-				if (document.querySelector("#t-crystallball")) {
-					document.querySelector("#t-crystallball").remove();
-				}
+				// clearInterval(pumpkinSpeaks);
+				clearScreen();
+
 				const words = [ 'Бесспорно', 'Предрешено', 'Мой ответ — нет', 'Определённо да', 'Хорошие перспективы', 'Да', 'Спроси позже', '42', 'Вероятнее всего', 'Лучше не рассказывать', 'Даже не думай', 'Весьма сомнительно'];
 
 				const num = Math.floor(Math.random() * 12);

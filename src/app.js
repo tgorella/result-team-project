@@ -6,15 +6,14 @@ import Word from './modules/PumpkinWords.js'
 import Answers from './modules/answer.module.js'
 import BackgroundModule from './modules/background.module'
 
-export const pumpkinSpeaks = setInterval(generateWords, 2000);
-
-function generateWords() {
-  const word = new Word()
-  word.render()
-  setTimeout(() => {
-    word.remove()
-  }, 4000)
-}
+// export const pumpkinSpeaks = setInterval(generateWords, 2000);
+// function generateWords() {
+//   const word = new Word()
+//   word.render()
+//   setTimeout(() => {
+//     word.remove()
+//   }, 4000)
+// }
 
 // создаем объект класса модуля
 
