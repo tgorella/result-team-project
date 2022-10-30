@@ -2,10 +2,13 @@ import { createGameBoard, createGameConditions, finishGame, refreshScore, score 
 import { potions } from '../clicksgame/potions'
 import renderClicksContainer from '../clicksgame/renderClicksContainer'
 import {Module} from '../core/module'
+import frog from '../clicksgame/clicks-assets/frog.png'
+import pot from '../clicksgame/clicks-assets/pot.png'
+import hat from '../clicksgame/clicks-assets/hat.png'
 
 export default class ClicksModule extends Module {
 	constructor() {
-		super('clicks', `Игра зельеварение`)
+		super('clicks', `Игра Зельеварение`)
 		this.time = 0
 		this.start = document.querySelector(".d-start-screen")		
 	}
@@ -13,8 +16,6 @@ export default class ClicksModule extends Module {
 	trigger() {
 		let time = 0
 		let score = 0
-		// const game = document.querySelector(".d-game-screen")
-		// const screens = document.querySelectorAll(".d-screen")
 
 		document.addEventListener('click', (event) => {
 
@@ -107,9 +108,9 @@ export default class ClicksModule extends Module {
 					const result2 = "Победа! Ты приготовил нужное зелье и выбрался из логова ведьмы." 
 					const result3 = "Ого! В тебе проснулся настоящий талант и ты стал добрым волшебником. Ты победил злую ведьму и прогнал её из своего края."
 					
-					const img1 = "https://cdn-icons-png.flaticon.com/512/5431/5431750.png"
-					const img2 = "https://cdn-icons-png.flaticon.com/512/2579/2579386.png"
-					const img3 = "https://cdn-icons-png.flaticon.com/512/2579/2579272.png"
+					const img1 = frog
+					const img2 = pot
+					const img3 = hat
 					
 					const spanScore = document.querySelector(".d-result-score")
 					const text = document.querySelector(".d-result-text")
@@ -131,7 +132,6 @@ export default class ClicksModule extends Module {
 					  img.src = img3
 					}
 				}
-
 			}
 		})
 	}

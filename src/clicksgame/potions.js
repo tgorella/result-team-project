@@ -1,34 +1,43 @@
+import green from "./clicks-assets/green.png"
+import violet from "./clicks-assets/violet.png"
+import blue from "./clicks-assets/blue.png"
+import red from "./clicks-assets/red.png"
+import yellow from "./clicks-assets/yellow.png"
+import pink from "./clicks-assets/pink.png"
+import orange from "./clicks-assets/orange.png"
+import purple from "./clicks-assets/purple.png"
+
 export const potions = [
     {
       id: "green",
-      url: "https://cdn-icons-png.flaticon.com/512/5816/5816260.png"
+      url: green
     },
     {
       id: "violet",
-      url: "https://cdn-icons-png.flaticon.com/512/1205/1205664.png"
+      url: violet
     },
     {
       id: "blue",
-      url: "https://cdn-icons-png.flaticon.com/512/2029/2029453.png"
+      url: blue
     },
     {
       id: "red",
-      url: "https://cdn-icons-png.flaticon.com/512/5438/5438611.png"
+      url: red
     },
     {
       id: "yellow",
-      url: "https://cdn-icons-png.flaticon.com/512/2579/2579397.png"
+      url: yellow
     },
     {
       id: "pink",
-      url: "https://cdn-icons-png.flaticon.com/512/1089/1089517.png"
+      url: pink
     },
     {
       id: "orange",
-      url: "https://cdn-icons-png.flaticon.com/512/7139/7139525.png"
+      url: orange
     },
     {
       id: "purple",
-      url: "https://cdn-icons-png.flaticon.com/512/5746/5746859.png"
+      url: purple
     }
 ]

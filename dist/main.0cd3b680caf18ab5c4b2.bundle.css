@@ -537,6 +537,8 @@ z-index: 900;
   }
 
 .span-score {
+	font-size: 20px;
+
 	color: #DBAD5E;
 }
 
@@ -556,6 +558,13 @@ z-index: 900;
 
 .d-game-timer {
 	font-size: 20px;
+}
+
+.d-cond{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .d-conditions {
@@ -604,8 +613,14 @@ z-index: 900;
 }
 
 .d-result-text {
+	margin-top: 20px;
+	
 	max-width: 400px;
 	text-align: center;
+}
+
+.d-result-score {
+	color: #fbc058;
 }
 
 .d-magic-item__img {

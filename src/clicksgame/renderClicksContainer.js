@@ -1,3 +1,5 @@
+import magicPot from "./clicks-assets/magic-pot.png"
+
 //  Создание HTML-основы игры
 export default function renderClicksContainer() {
     // Контейнер для всей игры
@@ -42,12 +44,15 @@ export default function renderClicksContainer() {
     gameScreen.innerHTML = `
     <h3 class="d-game-timer">Осталось <span id="d-time">00:00</span></h3>
       <div class="d-conditions" id="d-conditions">
-        <div class="d-condition"></div>
+        <div class="d-cond">
+            <p>Добавь:</p>
+            <div class="d-condition"></div>
+        </div>
         <div class="d-score-table">Счёт: <span class="d-score"></span></div>
       </div>
       <div class="d-board" id="d-board"></div>
       <div class="d-magic-pot">
-        <img class="d-magic-pot__img" src="https://cdn-icons-png.flaticon.com/512/5438/5438642.png" alt="">
+        <img class="d-magic-pot__img" src="${magicPot}" alt="">
       </div>
     `
     

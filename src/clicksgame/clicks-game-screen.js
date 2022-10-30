@@ -1,7 +1,5 @@
 import { potions } from "./potions"
 
-
-// export let score = 0
 function getRandom(min, max) {
     return Math.round(Math.random() * (max-min) + min)
 }
