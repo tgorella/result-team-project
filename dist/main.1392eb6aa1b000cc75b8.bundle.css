@@ -49,6 +49,12 @@ body {
     background: #343434;
 }
 
+.t-disabled {
+	background: #343434;
+	cursor: not-allowed;
+	border-radius: 0;
+}
+
 #t-gameContainer {
 	background-color: #1e1f34;
 	color: #fff;
