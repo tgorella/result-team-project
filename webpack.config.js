@@ -22,7 +22,6 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, 'dist'),
       filename: filename('js'),
       clean: true,
-      publicPath: 'public',
     },
     resolve: {
       extensions: ['.js'],
@@ -61,7 +60,7 @@ module.exports = (env, argv) => {
           },
         },
         {
-          test: /.(png|svg|jpg|jpeg|gif|webp)$/i,
+          test: /.(png|svg|jpg|jpeg|gif|webp|mp3)$/i,
           type: 'asset/resource',
         },
       ],
