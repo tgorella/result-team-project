@@ -11,6 +11,7 @@ export default class BackgroundModule extends Module {
   constructor() {
     super('background', `Сменить фон`)
     this.random = 0
+		
   }
 
   init() {
@@ -25,6 +26,7 @@ export default class BackgroundModule extends Module {
     document.addEventListener('click', (event) => {
       console.log(event.target.dataset.type)
       if (event.target.dataset.type === this.type) {
+				
         this.init()
         this.changeBG()
       } else if (
@@ -33,7 +35,7 @@ export default class BackgroundModule extends Module {
       ) {
         const particlesJS = document.querySelector('#particles-js')
         if (particlesJS) {
-          document.body.remove(particlesJS)
+					particlesJS.remove()
         }
       }
     })
@@ -47,7 +49,7 @@ export default class BackgroundModule extends Module {
     const playlist = document.createElement('div')
     playlist.className = 'play-list'
     const audio = document.createElement('audio')
-    audio.autoplay = 'autoplay'
+    audio.autoplay = 'true'
 
     const neonBtn = document.createElement('a')
     neonBtn.href = '#'
