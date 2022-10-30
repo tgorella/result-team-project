@@ -1,15 +1,17 @@
 import '../background/styles.css'
-
-import { Module } from '../core/module'
+import { Module } from '../core/module.js'
 import {
   background1,
   background2,
   background3,
 } from '../background/backgrounds'
+import track1 from '../background/audio/crywolf.mp3'
+import track2 from '../background/audio/halloween-parade.mp3'
+import track3 from '../background/audio/halloween.mp3'
 
 export default class BackgroundModule extends Module {
   constructor() {
-    super('background', `Сменить фон`)
+    super('background', 'Tсс...')
     this.random = 0
 		
   }
@@ -24,7 +26,6 @@ export default class BackgroundModule extends Module {
 
   trigger() {
     document.addEventListener('click', (event) => {
-      console.log(event.target.dataset.type)
       if (event.target.dataset.type === this.type) {
 				
         this.init()
@@ -35,7 +36,9 @@ export default class BackgroundModule extends Module {
       ) {
         const particlesJS = document.querySelector('#particles-js')
         if (particlesJS) {
-					particlesJS.remove()
+
+          particlesJS.remove()
+
         }
       }
     })
@@ -43,7 +46,7 @@ export default class BackgroundModule extends Module {
 
   changeBG() {
     const backgrounds = [background1, background2, background3]
-    const tracks = ['/crywolf.mp3', '/halloween-parade.mp3', '/halloween.mp3']
+    const tracks = [track1, track2, track3]
     const btnColors = ['white', 'orange', 'grey']
 
     const playlist = document.createElement('div')
@@ -80,6 +83,7 @@ export default class BackgroundModule extends Module {
       audio.src = tracks[random]
       neonBtn.className = btnColors[random]
     }
+
     randomBG()
 
     neonBtn.addEventListener('click', () => {
