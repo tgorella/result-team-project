@@ -1,7 +1,8 @@
-import * as Const from '../../modules/Const.js'
+import { clearScreen } from '../../../utils.js'
 
 export default function stopPlay(score) {
 	const slide3 = document.querySelector('#t-game-over');
+	slide3.innerHTML = '';
 	const header = document.createElement('h2');
 	header.innerText = 'GAME OVER';
 	header.className = 't-red';
@@ -13,7 +14,7 @@ export default function stopPlay(score) {
 	quitButton.className = 't-play-btn';
 	slide3.append(header, totalScore, quitButton);
 	quitButton.addEventListener('click', (event) => {
-		window.location.reload();
+		clearScreen();
 	})
 
 	

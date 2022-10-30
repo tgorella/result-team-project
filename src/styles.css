@@ -60,7 +60,7 @@ body {
 	align-items: center;
 	width: 100vw;
 	height: 100vh;
-	z-index: 999;
+	z-index: 998;
 }
 h1 {
 	font-size: 40px;
@@ -88,11 +88,11 @@ section {
 	align-items: center;
 	background-color: #27140c;
 	transition: transform ease 1s;
-	z-index: 999;
+	z-index: 998;
 	overflow: hidden;
 }
 #t-welcome {
-	z-index: 1000;
+	z-index: 999;
 }
 .t-play {
 	transform: translateY(-100%);
