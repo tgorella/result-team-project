@@ -8,9 +8,7 @@ import Hero from '../pupgame/modules/Hero.js';
 import Stones from '../pupgame/modules/Stones.js';
 import gameOver from '../pupgame/modules/utils/GameOver.js';
 import stopPlay from '../pupgame/modules/utils/StopPlay.js';
-import { clearScreen } from '../../src/utils'
-
-// import { pumpkinSpeaks } from '../app.js';
+import { pumpkinSpeaks } from '../app.js';
 
 
 
@@ -21,10 +19,11 @@ export default class PupGame extends Module {
 	}
 
 	trigger() {
+		let isOpen = false;
 		document.addEventListener('click', (event) => {	
-			if (event.target.dataset.type === this.type ) {
-				clearScreen();
-				// clearInterval(pumpkinSpeaks);
+			if (event.target.dataset.type === this.type && !isOpen) {
+				clearInterval(pumpkinSpeaks);
+				isOpen = true;
     renderPickUpPumpkins();
 		const startPlayBtn = document.querySelector('#t-start-play-btn');
 		startPlayBtn.addEventListener('click', startPlay);
