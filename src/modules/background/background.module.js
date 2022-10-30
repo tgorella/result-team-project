@@ -19,7 +19,7 @@ export default class BackgroundModule extends Module {
     if (!document.querySelector("#particles-js")) {
       const particlesJS = document.createElement("div");
       particlesJS.id = "particles-js";
-      document.body.append(particlesJS);
+      document.body.prepend(particlesJS);
     }
   }
 
@@ -59,7 +59,7 @@ export default class BackgroundModule extends Module {
     neonBtn.innerText = "Play";
 
     playlist.append(audio, neonBtn);
-    document.body.append(playlist);
+    document.body.prepend(playlist);
 
     const randomBG = () => {
       const particlesJS = document.querySelector("#particles-js");

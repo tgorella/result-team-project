@@ -34,9 +34,8 @@ class Spider {
     this.startY = -200;
     this.scaleFactor = 1;
     this.currentImageIndex = 0;
-    this.maxImageIndex = 9;
+    this.maxImageIndex = 8;
     this.images = [];
-    this.active = false;
     this.ctx = ctx;
 
     for (let i = 0; i < this.maxImageIndex; i++) {
@@ -44,15 +43,7 @@ class Spider {
       image.src = SpiderImages[i];
       this.images.push(image);
     }
-  }
-
-  changeState() {
-    if (this.active) {
-      this.active = false;
-    } else {
-      this.active = true;
-      this.initiate();
-    }
+    this.initiate();
   }
 
   initiate() {
@@ -64,7 +55,7 @@ class Spider {
     this.webStartX = this.x + this.spiderHalfSize;
 
     // Random tween parameters
-    const goDownY = 100 + random(50, 150);
+    const goDownY = 100 + random(50, 100);
     const goDownSpeed = 1500 + random(500, 1500);
 
     const goUpY = this.startY;
@@ -80,33 +71,28 @@ class Spider {
   }
 
   render() {
-    if (this.active) {
-      // Draw web
-      this.ctx.beginPath();
-      this.ctx.lineWidth = 2;
-      this.ctx.strokeStyle = "#ffffff";
-      this.ctx.moveTo(this.webStartX, this.webStartY);
-      this.ctx.lineTo(
-        this.x + this.spiderHalfSize,
-        this.y + this.spiderHalfSize
-      );
-      this.ctx.stroke();
+    // Draw web
+    this.ctx.beginPath();
+    this.ctx.lineWidth = 2;
+    this.ctx.strokeStyle = "#ffffff";
+    this.ctx.moveTo(this.webStartX, this.webStartY);
+    this.ctx.lineTo(this.x + this.spiderHalfSize, this.y + this.spiderHalfSize);
+    this.ctx.stroke();
 
-      // Draw image
-      const imageToDraw = this.images[this.currentImageIndex];
-      this.ctx.drawImage(
-        imageToDraw,
-        this.x,
-        this.y,
-        imageToDraw.width * this.scaleFactor,
-        imageToDraw.height * this.scaleFactor
-      );
+    // Draw image
+    const imageToDraw = this.images[this.currentImageIndex];
+    this.ctx.drawImage(
+      imageToDraw,
+      this.x,
+      this.y,
+      imageToDraw.width * this.scaleFactor,
+      imageToDraw.height * this.scaleFactor
+    );
 
-      // Change animation frame
-      this.currentImageIndex++;
-      if (this.currentImageIndex >= this.maxImageIndex - 1) {
-        this.currentImageIndex = 0;
-      }
+    // Change animation frame
+    this.currentImageIndex++;
+    if (this.currentImageIndex >= this.maxImageIndex - 1) {
+      this.currentImageIndex = 0;
     }
   }
 }
@@ -218,12 +204,13 @@ class Translate {
       const isBtnClick = event.target.closest(".ju-click-btn");
       if (isBtnClick) {
         if (this.#canvas.classList.contains("ju-canvas-hide")) {
-          console.log("1");
           this.#canvas.classList.remove("ju-canvas-hide");
-          this.#spiders.forEach((spider) => spider.changeState());
+          for (let i = 0; i < 3; i++) {
+            this.#spiders.push(new Spider(this.#ctx));
+          }
         } else {
-          console.log(2);
           this.#canvas.classList.add("ju-canvas-hide");
+          this.#spiders = [];
         }
       }
     });
@@ -235,10 +222,6 @@ class Translate {
 
     this.#ctx.canvas.width = window.innerWidth;
     this.#ctx.canvas.height = window.innerHeight / 2.5;
-
-    for (let i = 0; i < 3; i++) {
-      this.#spiders.push(new Spider(this.#ctx));
-    }
 
     createjs.Ticker.setFPS(30);
     createjs.Ticker.addEventListener("tick", () => {

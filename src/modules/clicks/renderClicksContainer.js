@@ -68,7 +68,7 @@ export default function renderClicksContainer() {
 
   // Добавление в контейнер экранов
   clicksContainer.append(startScreen, gameScreen, endScreen);
-  document.body.append(clicksContainer);
+  document.body.prepend(clicksContainer);
 
   return clicksContainer;
 }
