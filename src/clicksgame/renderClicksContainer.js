@@ -58,8 +58,6 @@ export default function renderClicksContainer() {
     <h3>Cчет: <span class="d-result-score"></span></h3>
     <p class="d-result-text"></p> 
     <img class="d-magic-item__img">
-    
-    <button class="d-btn d-try-again">Начать сначала</button>
     `
 
     // Добавление в контейнер экранов
