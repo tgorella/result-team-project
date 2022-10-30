@@ -7,7 +7,7 @@ export function clearScreen() {
 		document.querySelector("#t-crystallball").remove();
 	}
 	if(document.querySelector("#t-gameContainer")) {
-		document.querySelector("#t-gameContainer").remove()
+		window.location.reload();
 	}
 	if(document.querySelector("#particles-js")) {
 		document.querySelector("#particles-js").remove()

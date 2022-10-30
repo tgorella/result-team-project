@@ -10,7 +10,7 @@ export default class Home extends Module {
 	trigger() {
 		document.addEventListener('click', (event) => {	
 			if (event.target.dataset.type === this.type) {
-				clearScreen();
+				window.location.reload();
 			}
 		})
 	}

@@ -14,7 +14,7 @@ export default function stopPlay(score) {
 	quitButton.className = 't-play-btn';
 	slide3.append(header, totalScore, quitButton);
 	quitButton.addEventListener('click', (event) => {
-		clearScreen();
+		window.location.reload();
 	})
 
 	
