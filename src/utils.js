@@ -3,6 +3,11 @@ export function random(min, max) {
 }
 
 export function clearScreen() {
+	const menuItems = document.querySelectorAll('.menu-item');
+				for (let i = 1; i < menuItems.length; i++) {
+					menuItems[i].classList.add('hide');
+				}
+	
 	if (document.querySelector("#t-crystallball")) {
 		document.querySelector("#t-crystallball").remove();
 	}

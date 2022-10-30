@@ -490,6 +490,7 @@ canvas {
 }
 
 .white {
+  font-family: 'Press Start 2P';
   font-size: 35px;
   text-transform: lowercase;
   text-align: center;
@@ -518,6 +519,7 @@ canvas {
 }
 
 .orange {
+  font-family: 'Press Start 2P';
   font-size: 35px;
   text-transform: lowercase;
   text-align: center;
@@ -547,6 +549,7 @@ canvas {
 }
 
 .grey {
+  font-family: 'Press Start 2P';
   font-size: 35px;
   text-transform: lowercase;
   text-align: center;

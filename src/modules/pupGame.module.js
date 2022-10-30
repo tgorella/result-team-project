@@ -26,7 +26,7 @@ export default class PupGame extends Module {
 				clearInterval(pumpkinSpeaks);
 				const menuItems = document.querySelectorAll('.menu-item');
 				for (let i = 1; i < menuItems.length; i++) {
-					menuItems[i].remove();
+					menuItems[i].classList.add('hide');
 				}
 				isOpen = true;
     renderPickUpPumpkins();
