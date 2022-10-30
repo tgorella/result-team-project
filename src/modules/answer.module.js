@@ -20,6 +20,13 @@ export default class Answers extends Module {
 			if (event.target.dataset.type === this.type) {
 				clearInterval(pumpkinSpeaks);
 				clearScreen();
+
+				clearInterval(pumpkinSpeaks);
+				const menuItems = document.querySelectorAll('.menu-item');
+				for (let i = 1; i < menuItems.length; i++) {
+					menuItems[i].classList.add('hide');
+				}
+				
 				const words = [ 'Бесспорно', 'Предрешено', 'Мой ответ — нет', 'Определённо да', 'Хорошие перспективы', 'Да', 'Спроси позже', '42', 'Вероятнее всего', 'Лучше не рассказывать', 'Даже не думай', 'Весьма сомнительно'];
 
 				const num = Math.floor(Math.random() * 12);

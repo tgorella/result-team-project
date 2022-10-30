@@ -23,6 +23,9 @@ body {
 		overflow: hidden;
 }
 
+.hide {
+	display: none;
+}
 .menu {
     position: fixed;
     z-index: 1000;

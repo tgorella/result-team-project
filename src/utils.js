@@ -7,7 +7,6 @@ export function clearScreen() {
 				for (let i = 1; i < menuItems.length; i++) {
 					menuItems[i].classList.remove('hide');
 				}
-	
 	if (document.querySelector("#t-crystallball")) {
 		document.querySelector("#t-crystallball").remove();
 	}
