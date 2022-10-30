@@ -11,7 +11,7 @@ import track3 from '../background/audio/halloween.mp3'
 
 export default class BackgroundModule extends Module {
   constructor() {
-    super('background', `Tсс...`)
+    super('background', 'Tсс...')
     this.random = 0
   }
 
