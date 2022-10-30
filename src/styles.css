@@ -1,57 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Press+Start+2P&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Akronim');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-    height: 100vh;
-    width: 100vw;
-		background-color: #fff;
-		background-image: url(./Halloween.jpg);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		position: relative;
-		filter: brightness(0.9);
-		overflow: hidden;
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+	height: 100vh;
+	width: 100vw;
+	background-color: #fff;
+	background-image: url(./assets/halloween.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	filter: brightness(0.9);
+	overflow: hidden;
 }
 
 .hide {
 	display: none;
 }
+
 .menu {
-    position: fixed;
-    z-index: 1000;
-    width: 450px;
-    background: #1b1a1a;
-    border-radius: 15px;
-    display: none;
-    list-style: none;
+	position: fixed;
+	z-index: 1000;
+	width: 450px;
+	background: #1b1a1a;
+	border-radius: 15px;
+	display: none;
+	list-style: none;
 
 }
 
 .menu.open {
-    display: block;
+	display: block;
 }
 
 .menu .menu-item {
-    padding: 20px 40px;
-    font-size: 1.5rem;
-    color: #eee;
-    cursor: pointer;
-    transition: background-color .2s ease-in;
-    border-radius: inherit;
+	padding: 20px 40px;
+	font-size: 1.5rem;
+	color: #eee;
+	cursor: pointer;
+	transition: background-color .2s ease-in;
+	border-radius: inherit;
 }
 
 .menu .menu-item:hover {
-    background: #343434;
+	background: #343434;
 }
 
 .t-disabled {
@@ -71,6 +72,7 @@ body {
 	height: 100vh;
 	z-index: 998;
 }
+
 h1 {
 	font-size: 40px;
 	margin-bottom: 20px;
@@ -86,6 +88,7 @@ h2 {
 	font-family: 'Press Start 2P', cursive;
 	text-shadow: #fc0 1px 0 20px, #ff9d00 1px 0 20px;
 }
+
 section {
 	position: fixed;
 	top: 0;
@@ -100,9 +103,11 @@ section {
 	z-index: 998;
 	overflow: hidden;
 }
+
 #t-welcome {
 	z-index: 999;
 }
+
 .t-play {
 	transform: translateY(-100%);
 }
@@ -112,10 +117,13 @@ section {
 	max-width: 600px;
 	margin-bottom: 20px;
 }
+
 .t-instructions div {
 	margin-bottom: 20px;
 }
-.t-play-btn, .t-answer-button {
+
+.t-play-btn,
+.t-answer-button {
 	font-size: 30px;
 	text-transform: uppercase;
 	padding: 20px 40px;
@@ -125,9 +133,11 @@ section {
 	border-radius: 60px;
 	cursor: pointer;
 }
+
 .t-play-btn:hover {
 	transform: translateY(2px);
 }
+
 #t-score {
 	font-size: 20px;
 	margin-bottom: 20px;
@@ -135,34 +145,37 @@ section {
 	font-family: 'Press Start 2P', cursive;
 	text-align: center;
 }
+
 .t-fence {
-	background-image: url(./pupgame/fence.webp);
+	background-image: url(./../src/assets/pupgame/fence.webp);
 	width: 1200px;
 	height: 60px;
 }
+
 .t-playground-container {
 	width: 1224px;
 	height: 688px;
 	display: flex;
 
 }
+
 .t-fence-side {
 	width: 12px;
 	height: 100%;
-background-image: url(./pupgame/fence-side.webp);
-
+	background-image: url(./../src/assets/pupgame/fence-side.webp);
 }
+
 .t-fence-bottom {
-background-image: url(./pupgame/fence-bottom.webp);
-height: 28px;
+	background-image: url(./../src/assets/pupgame/fence-bottom.webp);
+	height: 28px;
 }
 
 .t-playground {
-min-width: 1200px;
-height: 600px;
-background-color: #3d4357;
-position: relative;
-background-image: url(./pupgame/ground.webp);
+	min-width: 1200px;
+	height: 600px;
+	background-color: #3d4357;
+	position: relative;
+	background-image: url(./../src/assets/pupgame/ground.webp);
 }
 
 .t-ghost {
@@ -175,6 +188,7 @@ background-image: url(./pupgame/ground.webp);
 	justify-content: flex-end;
 	align-items: center;
 }
+
 .t-ghost-image {
 	width: 100%;
 	position: absolute;
@@ -186,119 +200,131 @@ background-image: url(./pupgame/ground.webp);
 	position: absolute;
 	width: 60px;
 	height: 60px;
-background-image: url(./pupgame/pumpkin1.webp);
-background-size: contain;
-background-repeat: no-repeat;
-background-position: bottom center;
-z-index: 50;
+	background-image: url(./../src/assets/pupgame/pumpkin1.webp);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	z-index: 50;
 
 }
+
 .t-stone {
 	position: absolute;
 	width: 124px;
 	height: 40px;
-background-repeat: no-repeat;
-background-position: bottom center;
+	background-repeat: no-repeat;
+	background-position: bottom center;
 }
 
 .t-stone0 {
-	background-image: url(./pupgame/stone0.webp);
+	background-image: url(./../src/assets/pupgame/stone0.webp);
 	position: absolute;
 	width: 124px;
 	height: 40px;
-background-repeat: no-repeat;
-background-position: bottom center;
-}
-.t-stone1 {
-	background-image: url(./pupgame/stone1.webp);
-	position: absolute;
-	width: 124px;
-	height: 40px;
-background-repeat: no-repeat;
-background-position: bottom center;
-}
-.t-stone2 {
-	background-image: url(./pupgame/stone2.webp);
-	position: absolute;
-	width: 124px;
-	height: 40px;
-background-repeat: no-repeat;
-background-position: bottom center;
-}
-.t-stone3 {
-	background-image: url(./pupgame/stone3.webp);
-	position: absolute;
-	width: 124px;
-	height: 40px;
-background-repeat: no-repeat;
-background-position: bottom center;
-}
-.t-stone4 {
-	background-image: url(./pupgame/stone4.webp);
-	position: absolute;
-	width: 124px;
-	height: 40px;
-background-repeat: no-repeat;
-background-position: bottom center;
-}
-.t-dead {
+	background-repeat: no-repeat;
+	background-position: bottom center;
 }
 
+.t-stone1 {
+	background-image: url(./../src/assets/pupgame/stone1.webp);
+	position: absolute;
+	width: 124px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+}
+
+.t-stone2 {
+	background-image: url(./../src/assets/pupgame/stone2.webp);
+	position: absolute;
+	width: 124px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+}
+
+.t-stone3 {
+	background-image: url(./../src/assets/pupgame/stone3.webp);
+	position: absolute;
+	width: 124px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+}
+
+.t-stone4 {
+	background-image: url(./../src/assets/pupgame/stone4.webp);
+	position: absolute;
+	width: 124px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+}
+
+.t-dead {}
+
 .t-ghost {
-  animation: soar infinite ease 3s;
+	animation: soar infinite ease 3s;
 }
 
 .t-ghost-shadow {
-  background-color: #282c3a;
-  height: 15px;
-  width: 60px;
-  margin-top: 8px;
-  border-radius: 50%;
-  animation: cast-shadow infinite ease 3s;
+	background-color: #282c3a;
+	height: 15px;
+	width: 60px;
+	margin-top: 8px;
+	border-radius: 50%;
+	animation: cast-shadow infinite ease 3s;
 	opacity: 0.7;
 }
 
 @keyframes soar {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(0, -30%, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+
+	50% {
+		transform: translate3d(0, -30%, 0);
+	}
+
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
 }
 
 @keyframes cast-shadow {
-  0% {
-    width: 60px;
-  }
-  50% {
-    width: 40px;
-  }
-  100% {
-    width: 60px;
-  }
+	0% {
+		width: 60px;
+	}
+
+	50% {
+		width: 40px;
+	}
+
+	100% {
+		width: 60px;
+	}
 }
 
 @keyframes t-pumpkins-message {
-  0% {
-    transform: translate3d(0, 0, 0);
+	0% {
+		transform: translate3d(0, 0, 0);
 		opacity: 0;
 		width: 250px;
-  }
-  50% {
-    transform: translate3d(0, -30%, 0);
+	}
+
+	50% {
+		transform: translate3d(0, -30%, 0);
 		opacity: 100%;
 		width: 350px;
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
+	}
+
+	100% {
+		transform: translate3d(0, 0, 0);
 		opacity: 0%;
 		width: 200px;
-  }
+	}
 }
+
 .t-words {
 	color: #fff;
 	margin: 20px;
@@ -315,6 +341,7 @@ background-position: bottom center;
 	font-family: 'Press Start 2P', cursive;
 
 }
+
 .t-words-black {
 	color: orange;
 	margin: 20px;
@@ -339,19 +366,22 @@ background-position: bottom center;
 	width: 100vw;
 	height: 260px;
 }
+
 #t-game-over {
 	top: 100vh;
 	transition: top ease 1s;
 }
+
 .t-red {
 	text-shadow: #e91e63 1px 0 20px, #ff4a4a 1px 0 20px;
-  font-size: 60px;
+	font-size: 60px;
 }
+
 h3 {
 	font-size: 30px;
 	text-transform: uppercase;
 	font-family: 'Press Start 2P', cursive;
-margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 #t-crystallball {
@@ -370,24 +400,23 @@ margin-bottom: 20px;
 	font-size: 20px;
 	text-transform: uppercase;
 	font-family: 'Press Start 2P', cursive;
-margin-bottom: 20px;
-margin-top: 80px;
+	margin-bottom: 20px;
+	margin-top: 80px;
 }
+
 .t-answer-button {
-background-color: #fff;
+	background-color: #fff;
 }
-
-
 
 .t-crystall-ball {
 	position: absolute;
-top: calc((100% - 60vh)/2);
-left: calc((100% - 50vh)/2);
-background-image: url(./crystalball.png);
-width: 512px;
-height: 512px;
-animation: crystalBollAnim 2s ease-in-out 0s 1 normal forwards;
-z-index: 901;
+	top: calc((100% - 60vh)/2);
+	left: calc((100% - 50vh)/2);
+	background-image: url(./assets/crystalball.png);
+	width: 512px;
+	height: 512px;
+	animation: crystalBollAnim 2s ease-in-out 0s 1 normal forwards;
+	z-index: 901;
 }
 
 @keyframes crystalBollAnim {
@@ -395,6 +424,7 @@ z-index: 901;
 		transform: translateX(600%);
 		transform-origin: 50% 50%;
 	}
+
 	100% {
 		transform: translateX(0%);
 		transform-origin: 50% 50%;
@@ -427,40 +457,40 @@ z-index: 901;
 	left: calc((100% - 45vh)/2);
 	height: 50vh;
 	width: 50vh;
-	background: rgb(121,193,230);
-	background: radial-gradient(circle, #fff 0%, rgba(121,193,230,1) 20%, transparent 70%);
+	background: rgb(121, 193, 230);
+	background: radial-gradient(circle, #fff 0%, rgba(121, 193, 230, 1) 20%, transparent 70%);
 	animation: glowAnim 2s ease-in-out 0s infinite normal forwards;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 904;
-	}
-	
-	@keyframes glowAnim {
-		0% {
-			transform: scale(1);
-		}
-	
-		50% {
-			transform: scale(1.1);
-		}
-	
-		100% {
-			transform: scale(1);
-		}
+}
+
+@keyframes glowAnim {
+	0% {
+		transform: scale(1);
 	}
 
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
 .t-crystall-ball-shadow {
-width: 400px;
-height: 100px;
-border-radius: 50%;
-position: absolute;
-top: 63%;
-left: 50%;
-transform: translateX(-45%);
-background-color: rgba(0,0,0, 0.5);
-filter: blur(5px);
-z-index: 900;
+	width: 400px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	top: 63%;
+	left: 50%;
+	transform: translateX(-45%);
+	background-color: rgba(0, 0, 0, 0.5);
+	filter: blur(5px);
+	z-index: 900;
 }
 
 .t-crystall-ball-message {
@@ -468,5 +498,5 @@ z-index: 900;
 	text-transform: uppercase;
 	font-family: 'Press Start 2P', cursive;
 	line-height: 1.2;
-z-index: 999;
+	z-index: 999;
 }
