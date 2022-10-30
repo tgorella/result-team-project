@@ -665,6 +665,7 @@ h3 {
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
+	z-index: 995;
 }
 
 .d-result-text {
